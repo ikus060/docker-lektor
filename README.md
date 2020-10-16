@@ -10,22 +10,21 @@ Docker builds: https://hub.docker.com/r/ikus060/lektor/
  
 ## Base image
 
-`python:3`
+`python:3-slim`
 
 ## Installed packages
 
  * rsync
  * Lektor 3.x
- * Nodejs 10.x
  * lessc
- * Java
+ * Java11
 
 # Usage
 
 **For development**
 You may use this lektor docker image to develop your website locally.
 
-    docker run -it -v `pwd`:/lektor -p 5000:5000 ikus060/lektor server
+    docker run -it -v `pwd`:/lektor -p 5000:5000 ikus060/lektor lektor server
 
 **FOR Gitlab CICD**
 
