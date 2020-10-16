@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get autoremove -y npm && \
     lessc --version && \
     mkdir /usr/share/man/man1 && \
-    apt-get install -y --no-install-recommends default-jre-headless rsync && \
+    apt-get install -y --no-install-recommends default-jre-headless rsync openssh-client && \
     pip3 install lektor==$RELEASE && \
     rm -rf /var/lib/apt/lists/* /root/.cache /root/.npm /root/.config /var/cache/debconf/* /var/log/* /usr/share/doc/* /usr/share/doc-base/* && \
     mkdir /lektor
